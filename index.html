@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Anime Trivia</title>
+  </head>
+  <body>
+    <header>
+      <h1>Anime Trivia</h1>
+      <ul>
+        <li>Question Number: <span id="current-question">0</span>/5</li>
+        <li id="current-score">Score: <span id="score">0</span>/5</li>
+      </ul>
+    </header>
+    <main>
+      <section class="quiz-container">
+        <section class="the-quiz">
+          <h2>Do you know your Anime?</h2>
+          <h3 id="quiz-question"></h3>
+          <ul id="quiz-answers">
+            <li class="answer"></li>
+            <li class="answer"></li>
+            <li class="answer"></li>
+            <li class="answer"></li>
+          </ul>
+          <div id="result"></div>
+          <button class="button" type="button" id="quiz-button">Start</button>
+        </section>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
