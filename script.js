@@ -51,12 +51,12 @@ function start() {
 function showQuestions() {
   if (currenQuestion < quizQA.length) {
     questions.text(quizQA[currenQuestion].question);
-    s;
+    $.each(quizQA[currenQuestion].choices, function (index, answer) {
+      const listAnswers = $(`<li class="answer">${answer}</li>`);
+      selection.append(listAnswers);
+    });
+    currenQuestion++;
   }
-  //   $.each(quizQA[currenQuestion].choices, function (index, answer) {
-  //     const listAnswers = $(`<li class="answer">${answer}</li>`);
-  //     selection.append(listAnswers);
-  //   });
 }
 
 function quizAppHandle() {
