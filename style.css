@@ -1,71 +1,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
-html,
 body {
-  background-color: #fff275;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  background: #2b2d42;
+  /* align-items: center;
+  justify-content: center; */
+  /* height: 100vh;
   color: #000000;
-  width: 100%;
-}
-
-h1,
-h2,
-h3,
-#result {
-  text-align: center;
-}
-
-li {
-  list-style: none;
-}
-
-.the-quiz {
-  background-color: #8d99ae;
-  width: 60%;
-  height: 500px;
-  border-radius: 5px;
-}
-
-#quiz-answers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%; */
 }
 
 .answer {
+  width: 100%;
+  font-weight: 500;
   text-align: left;
-  margin-left: 600px;
+  margin: 10px 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  width: 100%;
+  background-color: #3498db;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.answer:hover:not([disabled]) {
+  background-color: #2980b9;
+}
+
+.answer:disabled {
+  cursor: no-drop;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: right;
+}
+
+#next-btn {
+  background-color: #3498db;
+  font-weight: 500;
+  width: 150px;
+  border: none;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
 }
 
 .quiz-container {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
-  background-color: #f18f01;
+  text-align: center;
+  background: #fff275;
+  wdith: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  padding: 20px;
   border-radius: 10px;
-  border-width: 1px;
-  border-shadow: none;
-  color: white;
-  margin-left: 600px;
-  margin-top: 5px;
-  margin-bot: 5px;
-  padding: 15px 32px;
-  font-size: 20px;
+  padding: 30px;
 }
 
-.answer:hover,
-.button:hover {
-  cursor: pointer;
+.quiz-container h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #2b2d42;
+  padding-bottom: 30px;
 }
 
-header ul {
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 18px;
+  color: #2b2d42;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.options {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.correct {
+  background: #90ee90;
+}
+
+.incorrect {
+  background: #ff7f7f;
 }
